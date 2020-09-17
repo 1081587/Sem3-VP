@@ -4,3 +4,54 @@
 * {
     box-sizing: border-box;
 }
+
+/* HEADLINES FONT FAMILY */
+.font1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PARAGRAPH FONT FAMILY */
+.font2 {
+    font-family: 'Cutive Mono', monospace;
+}
+
+/* styling the values */
+
+.values h2 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.values_section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    text-align: center;
+    background-color: #fafafa;
+    width: 200px;
+    padding: 1%;
+    border-radius: 15%;
+}
+
+.box i {
+    color: #F85F02;
+}
+
+/* description values */
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 0% 15%;
+    margin-top: 5%;
+}
+
+.container img {
+    height: 200px;
+}
+
+.container p {
+    margin-left: 10%;
+    margin-top: 0%;
+}
