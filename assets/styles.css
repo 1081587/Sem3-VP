@@ -55,3 +55,39 @@
     margin-left: 10%;
     margin-top: 0%;
 }
+
+/* styling the banner and about section*/
+.banner {
+  
+    height: 100vh;  
+    top: 0;
+    background: url(images/banner-placeholder.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.about-section {
+    display: flex;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 5vw;
+}
+
+.about-text, .about-image {
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.about-text {
+    line-height: 1.6;
+    font-size: 17px;
+    margin-top: 5vw;
+}
+
+.about-image img {
+    display: block;
+    height: 28vw;
+    margin: 0 auto;
+    margin-top: 7vw;
+}
