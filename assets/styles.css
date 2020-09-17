@@ -43,7 +43,7 @@
 .container {
     display: flex;
     flex-direction: row;
-    padding: 0% 15%;
+    padding: 0% 20%;
     margin-top: 5%;
 }
 
@@ -58,8 +58,8 @@
 
 /* styling the banner and about section*/
 .banner {
-  
-    height: 100vh;  
+
+    height: 100vh;
     top: 0;
     background: url(images/banner-placeholder.jpg);
     background-size: cover;
@@ -67,18 +67,25 @@
     overflow: hidden;
 }
 
-.about-section {
+/* .about-section {
     display: flex;
     width: 75vw;
     margin: 0 auto;
     margin-top: 5vw;
-}
-
-.about-text, .about-image {
+} */
+/* 
+.about-text,
+.about-image {
     width: 30vw;
     margin: 0 auto;
-}
+} */
 
+.about-section {
+    display:flex; 
+    padding: 0% 15%;
+    gap: 15%;
+    margin: 3% 0% 15% 0%;
+}
 .about-text {
     line-height: 1.6;
     font-size: 17px;
@@ -86,8 +93,26 @@
 }
 
 .about-image img {
-    display: block;
     height: 28vw;
     margin: 0 auto;
-    margin-top: 7vw;
+    margin-top: 25%;
+}
+
+
+
+/* map */
+.contact_grid {
+    display: flex;
+    padding: 0% 15%;
+    gap: 10%;
+    justify-content: center;
+}
+
+.contact {
+    margin-top: 10%;
+}
+
+.contact_grid a {
+    text-decoration: none;
+    color: #F85F02;
 }
