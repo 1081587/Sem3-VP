@@ -7,13 +7,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/all.css">
 	<script src="script/script.js" defer></script>
+	<script src="script/video.js" defer></script>
+	<script src="script/hotspots.js" ></script>
 	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:wght@600&display=swap"
 		rel="stylesheet">
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Prata&family=Righteous&display=swap" rel="stylesheet"><body>
-	<div class="banner"></div>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Prata&family=Righteous&display=swap" rel="stylesheet">
+	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
+	<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+	<script src="https://vjs.zencdn.net/7.8.4/video.js" defer></script> -->
+
+	<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</head>
+
+<body>
+
+	<div>
+		<!-- video3 here -->
+		<video id="video1" class="video-js responsive-video ratio-16-9" controls preload="auto" width="640"
+			height="264">
+			<source src="assets/images/Sunset timelapse in just 10 seconds.mp4" type="video/mp4" />
+			<source src="assets/images/Sunset-timelapse-in-just-10-seconds.webm" type="video/webm" />
+			<p class="vjs-no-js">
+				To view this video please enable JavaScript, and consider upgrading to a
+				web browser that
+				<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+			</p>
+		</video>
+	</div>
+
 	<section>
-		<div class="about-section"  data-aos="fade-right" data-aos-easing="linerar" data-aos-delay="200" data-aos-duration="800">
+		<div class="about-section" data-aos="fade-right" data-aos-easing="linerar" data-aos-delay="200"
+			data-aos-duration="800">
 			<div class="about-text">
 				<h1 class="section-title font1">
 					WHAT IS CYCLEFE?
@@ -63,26 +89,30 @@
 			</a>
 		</section>
 	</section>
-	<section class="description_values" >
+	<section class="description_values">
 		<article class="container hidden goodprice" name="price">
 			<img src="assets/images/Good-Lookin.jpg" alt="">
 			<div class="textv">
-			<p class="font3">We understand how it feels to be on a tight budget. However, in Cyclefé this problem is
-				a past! Enjoy
-				your cup of tea or coffee <strong>only for 10 dkk!</strong> </p></div>
+				<p class="font3">We understand how it feels to be on a tight budget. However, in Cyclefé this problem is
+					a past! Enjoy
+					your cup of tea or coffee <strong>only for 10 dkk!</strong> </p>
+			</div>
 		</article>
 
 		<article class="container hidden socialising" name="social">
 			<img src="assets/images/Sara.jpg" alt="">
 			<div class="textv">
-			<p class="font3">Workshop, concert or a board game night? In Cyclefé we have <strong>social event for everyone!</strong> </p></div>
+				<p class="font3">Workshop, concert or a board game night? In Cyclefé we have <strong>social event for
+						everyone!</strong> </p>
+			</div>
 		</article>
 
 		<article class="container hidden unique" name="unique">
 			<img src="assets/images/Radina.jpg" alt="">
 			<div class="textv">
-			<p class="font3">Have you seen our new show room? Street art wall? Bike accessories? Not yet?! Come and
-				enjoy the <strong> unique atmosphere</strong> of Cyclefé! </p></div>
+				<p class="font3">Have you seen our new show room? Street art wall? Bike accessories? Not yet?! Come and
+					enjoy the <strong> unique atmosphere</strong> of Cyclefé! </p>
+			</div>
 		</article>
 	</section>
 	<section class="contact">
@@ -112,12 +142,12 @@
 	</section>
 
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-        AOS.init({
-            disable: 'mobile'
-        });
-    </script>
+	<script>
+		AOS.init();
+		AOS.init({
+			disable: 'mobile'
+		});
+	</script>
 </body>
 
 </html>

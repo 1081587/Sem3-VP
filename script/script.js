@@ -1,3 +1,5 @@
+// HIDING AND SHOWING CONTENT FOR VALUES
+
 const goodPrice = document.querySelector('.goodprice');
 const socialising = document.querySelector('.socialising');
 const unique = document.querySelector('.unique');
@@ -12,7 +14,6 @@ function displayElements(elementsToShow, elementsToHide) {
     }
 }
 
-
 document.getElementById('btn1').addEventListener('click', function () {
     displayElements([goodPrice], [socialising, unique]);
 });
@@ -23,3 +24,7 @@ document.getElementById('btn2').addEventListener('click', function () {
 document.getElementById('btn3').addEventListener('click', function () {
     displayElements([unique], [goodPrice, socialising]);
 });
+
+
+//END
+
