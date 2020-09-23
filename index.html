@@ -6,40 +6,52 @@
 	<link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/all.css">
+
 	<script src="script/script.js" defer></script>
 	<script src="script/video.js" defer></script>
-	<script src="script/hotspots.js" ></script>
+	<script src="script/hotspots.js" defer></script>
+
 	<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:wght@600&display=swap"
 		rel="stylesheet">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Prata&family=Righteous&display=swap" rel="stylesheet">
-	<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
-	<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
-	<script src="https://vjs.zencdn.net/7.8.4/video.js" defer></script> -->
-
 	<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 </head>
 
 <body>
+	<div class="">
+		<div>
+			<div id="div1" class="">
+				<video id="video1" class="video-js responsive-video ratio-16-9" controls preload="auto" width="640"
+					height="264" >
+					<source src="assets/images/All over in 10 seconds.mp4" type="video/mp4" />
+					<source src="assets/images/All-over-in-10-seconds.webm" type="video/webm" />
+					<p class="vjs-no-js">
+						To view this video please enable JavaScript, and consider upgrading to a
+						web browser that
+						<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					</p>
+				</video>
+			</div>
 
-	<div>
-		<!-- video3 here -->
-		<video id="video1" class="video-js responsive-video ratio-16-9" controls preload="auto" width="640"
-			height="264">
-			<source src="assets/images/Sunset timelapse in just 10 seconds.mp4" type="video/mp4" />
-			<source src="assets/images/Sunset-timelapse-in-just-10-seconds.webm" type="video/webm" />
-			<p class="vjs-no-js">
-				To view this video please enable JavaScript, and consider upgrading to a
-				web browser that
-				<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-			</p>
-		</video>
+			<div id="div2" class="hidden">
+				<video id="video2" class="video-js responsive-video ratio-16-9 "  width="1000"
+					height="1000" >
+					<source src="assets/images/Sunset timelapse in just 10 seconds.mp4" type="video/mp4" />
+					<source src="assets/images/Sunset-timelapse-in-just-10-seconds.webm" type="video/webm" />
+					<p class="vjs-no-js">
+						To view this video please enable JavaScript, and consider upgrading to a
+						web browser that
+						<a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					</p>
+				</video>
+			</div>
+	
+		</div>
 	</div>
 
 
-<body>
-	<div class="banner"></div>
 	<section>
 		<div class="about-section" data-aos="fade-right" data-aos-easing="linerar" data-aos-delay="200"
 			data-aos-duration="800">
@@ -153,13 +165,7 @@
 
 	</section>
 
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script>
-		AOS.init();
-		AOS.init({
-			disable: 'mobile'
-		});
-	</script>
+
 </body>
 
 </html>

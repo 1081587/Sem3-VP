@@ -1,9 +1,3 @@
-// JS by Dan Høegh
-// UCN MMD 2020
-
-// A framework for showing time-encoded hotspots on multiple videos.
-// Assumes either video.js or a parent <div> for the video that has the same dimensions as the video.
-
 // ## SETTINGS START
 const fps = 30; // ## adjust this to set the frames per second precision on the hotspot appearance (lower = less cpu used)
 const debug = false; // ## set to true to get console.log output, use   video.log('text')
@@ -68,6 +62,7 @@ let video = {
             clearInterval(engine); // stop the engine
         },
         update: () => {
+            
             hotspots.forEach((hotspot, index) => {
                 if (hotspot.active) {
                     // get video element for hotspot
@@ -146,28 +141,94 @@ let video = {
 
 video.hotspots.init(); 
 
+const div1 = document.querySelector('#div1');
+const div2 = document.querySelector('#div2');
+const vid1 = document.querySelector('#video1');
+const vid2 = document.querySelector('#video2');
+
 const hotspots = [
     {
-        // text right after the bird strike
+        active: true,
+        videoId: "video1",
+        markIn: 1,
+        markOut: 6,
+        sizeX: 15,
+        sizeY: 15,
+        posX: 20,
+        posY: 22,
+        ui: {
+            type: "box",
+            style: "border: 30px solid green; background-color: green; border-radius: 20%; "
+        },
+        hotspot: {
+            type: "function",
+            func: () => {
+                div1.classList.add("hidden");
+                div2.classList.remove("hidden");
+               videojs(video1).pause();
+            }
+        }
+    },
+    {
+        active: true,
+        videoId: "video1",
+        markIn: 2,
+        markOut: 6,
+        sizeX: 15,
+        sizeY: 15,
+        posX: 40,
+        posY: 22,
+        ui: {
+            type: "box",
+            style: "border: 30px solid red; background-color: red; border-radius: 20%; "
+        },
+        hotspot: {
+            type: "function",
+            func: () => {
+                div1.classList.add("hidden");
+                div2.classList.remove("hidden");
+               videojs(video1).pause();
+            }
+        }
+    },
+
+    {
         active: true,
         videoId: "video1",
         markIn: 3,
         markOut: 6,
-        sizeX: 55,
-        sizeY: 19,
-        posX: 22,
-        posY: 40,
+        sizeX: 15,
+        sizeY: 15,
+        posX: 60,
+        posY: 22,
         ui: {
             type: "box",
-            title: "Visit the blender website",
-            style: "border: 5px solid; background-color: rgba(0,0,0,.1)"
+            style: "border: 30px solid blue; background-color: blue; border-radius: 20%; "
         },
         hotspot: {
-            type: "link",
-            url: "https://peach.blender.org/",
-            target: "_blank"
+            type: "function",
+            func: () => {
+                div1.classList.add("hidden");
+                div2.classList.remove("hidden");
+               videojs(video1).pause();
+            }
         }
     }
 
-
+    
 ];
+
+
+if (time > 5) {
+    videojs().pause();
+}
+ 
+
+
+
+
+
+
+ 
+
+
