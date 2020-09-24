@@ -1,4 +1,7 @@
-// ## SETTINGS START
+let video1played = false;
+let video2played = false;
+let video3played = false;
+
 const fps = 30; // ## adjust this to set the frames per second precision on the hotspot appearance (lower = less cpu used)
 const debug = false; // ## set to true to get console.log output, use   video.log('text')
 // ## SETTINGS END
@@ -166,9 +169,10 @@ const hotspots = [{
         hotspot: {
             type: "function",
             func: () => {
+                video1played = true;
                 div1.classList.add("hidden");
                 div2.classList.remove("hidden");
-                videojs(video1).pause();
+                videojs('video1').pause();
             }
         }
     },
@@ -188,9 +192,10 @@ const hotspots = [{
         hotspot: {
             type: "function",
             func: () => {
+                video2played = true;
                 div1.classList.add("hidden");
-                div2.classList.remove("hidden");
-                videojs(video1).pause();
+                div3.classList.remove("hidden");
+                videojs('video1').pause();
             }
         }
     },
@@ -211,9 +216,10 @@ const hotspots = [{
         hotspot: {
             type: "function",
             func: () => {
+                video3played = true;
                 div1.classList.add("hidden");
-                div3.classList.remove("hidden");
-                videojs(video1).pause();
+                div4.classList.remove("hidden");
+                videojs('video1').pause();
             }
         }
     }
@@ -224,23 +230,45 @@ const hotspots = [{
 
 
 
-var pausetime = 2; // stop at 2 seconds
-var myPlayer = videojs('video1');
-myPlayer.on('timeupdate', function(e) {
-    if (myPlayer.currentTime() >= pausetime) {
-        myPlayer.pause();
+// var pausetime = 2; // stop at 2 seconds
+// var myPlayer = videojs('video1');
+// myPlayer.on('timeupdate', function(e) {
+//     if (myPlayer.currentTime() >= pausetime) {
+//         myPlayer.pause();
+//     }
+// });
+// myPlayer.play();
+
+
+
+videojs('video2').on('ended', () => {
+    div2.classList.add("hidden");
+    div1.classList.remove("hidden");
+    if (video1played && video2played && video3played) {
+        videojs('video1').currentTime(7);
+    } else {
+        videojs('video1').currentTime(3);
     }
-});
-myPlayer.play();
+})
 
+videojs('video3').on('ended', () => {
+    div3.classList.add("hidden");
+    div1.classList.remove("hidden");
+    if (video1played && video2played && video3played) {
+        videojs('video1').currentTime(7);
+    } else {
+        videojs('video1').currentTime(3);
+    }
+})
 
-
-
-
-
-
-
-
-
+videojs('video4').on('ended', () => {
+    div2.classList.add("hidden");
+    div1.classList.remove("hidden");
+    if (video1played && video2played && video3played) {
+        videojs('video1').currentTime(7);
+    } else {
+        videojs('video1').currentTime(3);
+    }
+})
 
 

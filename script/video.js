@@ -20,6 +20,7 @@ let option = {
 
 videojs('video2', option);
 videojs('video3', option);
+videojs('video4', option);
 
 
 
