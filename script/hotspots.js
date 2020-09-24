@@ -62,7 +62,7 @@ let video = {
             clearInterval(engine); // stop the engine
         },
         update: () => {
-            
+
             hotspots.forEach((hotspot, index) => {
                 if (hotspot.active) {
                     // get video element for hotspot
@@ -139,7 +139,7 @@ let video = {
     }
 }
 
-video.hotspots.init(); 
+video.hotspots.init();
 
 const div1 = document.querySelector('#div1');
 const div2 = document.querySelector('#div2');
@@ -165,7 +165,7 @@ const hotspots = [
             func: () => {
                 div1.classList.add("hidden");
                 div2.classList.remove("hidden");
-               videojs(video1).pause();
+                videojs(video1).pause();
             }
         }
     },
@@ -187,7 +187,7 @@ const hotspots = [
             func: () => {
                 div1.classList.add("hidden");
                 div2.classList.remove("hidden");
-               videojs(video1).pause();
+                videojs(video1).pause();
             }
         }
     },
@@ -210,25 +210,33 @@ const hotspots = [
             func: () => {
                 div1.classList.add("hidden");
                 div2.classList.remove("hidden");
-               videojs(video1).pause();
+                videojs(video1).pause();
             }
         }
     }
 
-    
+
 ];
 
 
-if (time > 5) {
-    videojs().pause();
-}
- 
+
+var pausetime = 2; // stop at 2 seconds
+var myPlayer = videojs('video1');
+myPlayer.on('timeupdate', function(e) {
+    if (myPlayer.currentTime() >= pausetime) {
+        myPlayer.pause();
+    }
+});
+myPlayer.play();
 
 
 
 
 
 
- 
+
+
+
+
 
 
