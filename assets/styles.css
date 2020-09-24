@@ -400,3 +400,10 @@ video:focus {
 	padding-bottom: 56.25%;
 }
 
+.video-js .vjs-big-play-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+
+}
