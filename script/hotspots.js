@@ -221,3 +221,26 @@ const hotspots = [{
 ];
 
 
+
+
+
+var pausetime = 2; // stop at 2 seconds
+var myPlayer = videojs('video1');
+myPlayer.on('timeupdate', function(e) {
+    if (myPlayer.currentTime() >= pausetime) {
+        myPlayer.pause();
+    }
+});
+myPlayer.play();
+
+
+
+
+
+
+
+
+
+
+
+
