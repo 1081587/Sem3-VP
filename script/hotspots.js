@@ -143,11 +143,14 @@ video.hotspots.init();
 
 const div1 = document.querySelector('#div1');
 const div2 = document.querySelector('#div2');
+const div3 = document.querySelector('#div3');
 const vid1 = document.querySelector('#video1');
 const vid2 = document.querySelector('#video2');
+const vid3 = document.querySelector('#video3');
 
-const hotspots = [
-    {
+videojs(video1).pause();
+
+const hotspots = [{
         active: true,
         videoId: "video1",
         markIn: 1,
@@ -209,7 +212,7 @@ const hotspots = [
             type: "function",
             func: () => {
                 div1.classList.add("hidden");
-                div2.classList.remove("hidden");
+                div3.classList.remove("hidden");
                 videojs(video1).pause();
             }
         }
