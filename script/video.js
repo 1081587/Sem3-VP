@@ -23,5 +23,3 @@ videojs('video3', option);
 videojs('video4', option);
 
 
-
-

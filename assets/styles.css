@@ -349,6 +349,9 @@ i {
     padding-bottom: 56.25%;
 }
 
+.vjs-tech {
+    height: 80%;
+}
 
 .videoHotspotsParent {
     position: relative;
@@ -383,13 +386,11 @@ video:focus {
 
 }
 
-.responsive-video {
-    width: 100%;
-}
 
-.ratio-16-9 {
+
+/* .ratio-16-9 {
     padding-bottom: 56.25%;
-}
+} */
 
 .video-js .vjs-big-play-button {
     position: absolute;
@@ -402,10 +403,6 @@ video:focus {
     margin: 0% 5%;
 }
 
-.responsive-video {
-    width: 100%;
-    height: 0;
-}
 
 .ratio-16-9 {
     padding-bottom: 56.25%;
@@ -439,4 +436,12 @@ video:focus {
     50%  { transform: translateY(-30px); }
     100% { transform: translateY(0); }
 }
+
+.responsive-video {
+    width: 100%;
+    height: 0;
+}
+
+
+
 
