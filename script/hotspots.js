@@ -156,15 +156,16 @@ videojs(video1).pause();
 const hotspots = [{
         active: true,
         videoId: "video1",
-        markIn: 1,
-        markOut: 6,
+        markIn: 25,
+        markOut: 30,
         sizeX: 15,
         sizeY: 15,
-        posX: 20,
+        posX: 14,
         posY: 22,
         ui: {
-            type: "box",
-            style: "border: 30px solid green; background-color: green; border-radius: 20%; "
+            type: "image",
+            style: "height: 150px; width:150px;",
+            image: "assets/images/social_icon.png"
         },
         hotspot: {
             type: "function",
@@ -179,15 +180,16 @@ const hotspots = [{
     {
         active: true,
         videoId: "video1",
-        markIn: 2,
-        markOut: 6,
+        markIn: 25,
+        markOut: 30,
         sizeX: 15,
         sizeY: 15,
-        posX: 40,
-        posY: 22,
+        posX: 60,
+        posY: 17,
         ui: {
-            type: "box",
-            style: "border: 30px solid red; background-color: red; border-radius: 20%; "
+            type: "image",
+            style: "height: 150px; width:150px;",
+            image: "assets/images/unique_icon.png"
         },
         hotspot: {
             type: "function",
@@ -203,15 +205,67 @@ const hotspots = [{
     {
         active: true,
         videoId: "video1",
-        markIn: 3,
-        markOut: 6,
+        markIn: 25,
+        markOut: 30,
         sizeX: 15,
         sizeY: 15,
-        posX: 60,
-        posY: 22,
+        posX: 78,
+        posY: 20,
+        ui: {
+            type: "image",
+            style: "height: 150px; width:150px;",
+            image: "assets/images/money_icon.png"
+        },
+        hotspot: {
+            type: "function",
+            func: () => {
+                video3played = true;
+                div1.classList.add("hidden");
+                div4.classList.remove("hidden");
+                videojs('video1').pause();
+            }
+        }
+    },
+
+    {
+        active: true,
+        videoId: "video1",
+        markIn: 25,
+        markOut: 28,
+        sizeX: 70,
+        sizeY: 40,
+        posX: 10,
+        posY: 7,
         ui: {
             type: "box",
-            style: "border: 30px solid blue; background-color: blue; border-radius: 20%; "
+            text: "AREN'T YOU WONDERING WHO THESE PEOPLE ARE?",
+            style: "font-size:50px; font-weight: 600; ",
+        },
+        hotspot: {
+            type: "function",
+            func: () => {
+                video3played = true;
+                div1.classList.add("hidden");
+                div4.classList.remove("hidden");
+                videojs('video1').pause();
+            }
+        }
+    },
+
+    
+    {
+        active: true,
+        videoId: "video1",
+        markIn: 29,
+        markOut: 30,
+        sizeX: 70,
+        sizeY: 40,
+        posX: 20,
+        posY: 7,
+        ui: {
+            type: "box",
+            text: "CHECK ALL THREE OF THEM TO FIND OUT",
+            style: "font-size:50px; font-weight: 600;",
         },
         hotspot: {
             type: "function",
@@ -226,28 +280,13 @@ const hotspots = [{
 
 ];
 
-
-
-
-
-// var pausetime = 2; // stop at 2 seconds
-// var myPlayer = videojs('video1');
-// myPlayer.on('timeupdate', function(e) {
-//     if (myPlayer.currentTime() >= pausetime) {
-//         myPlayer.pause();
-//     }
-// });
-// myPlayer.play();
-
-
-
 videojs('video2').on('ended', () => {
     div2.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(7);
+        videojs('video1').currentTime(31);
     } else {
-        videojs('video1').currentTime(3);
+        videojs('video1').currentTime(28);
     }
 })
 
@@ -255,9 +294,9 @@ videojs('video3').on('ended', () => {
     div3.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(7);
+        videojs('video1').currentTime(31);
     } else {
-        videojs('video1').currentTime(3);
+        videojs('video1').currentTime(28);
     }
 })
 
@@ -265,10 +304,19 @@ videojs('video4').on('ended', () => {
     div2.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(7);
+        videojs('video1').currentTime(31);
     } else {
-        videojs('video1').currentTime(3);
+        videojs('video1').currentTime(28);
     }
 })
 
 
+
+var pausetime = 29; // stop at 2 seconds
+var myPlayer = videojs('video1');
+myPlayer.on('timeupdate', function (e) {
+    if (myPlayer.currentTime() >= pausetime) {
+        myPlayer.pause();
+    }
+});
+myPlayer.play();

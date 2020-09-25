@@ -263,114 +263,105 @@ i {
         font-size: 2.5rem;
     }
 
-    @media (min-width:375px) and (max-width:720px) {
 
-        .banner {
-            background-size: contain;
-            height: 50vh;
-        }
+}
 
 
-        .about-section {
-            padding: 0% 3%;
-            margin-bottom: 5%;
-            flex-direction: column;
-        }
+@media (min-width:375px) and (max-width:720px) {
 
-        .about-image {
-            text-align: center;
-        }
-
-        .about-image img {
-            height: 400px;
-            margin-top: 5%;
-            margin-bottom: 10%;
-        }
-
-        .box i {
-            font-size: 6rem;
-        }
-
-        .box {
-            margin: 5% auto;
-            padding: 4%;
-        }
-
-        .container img {
-            width: 0 auto;
-        }
-
-        .container {
-            flex-direction: column;
-        }
-
-        .values_section {
-            flex-direction: column;
-
-        }
-
-        .container {
-            padding: 0% 10%;
-        }
-
-        .section-title {
-            margin-bottom: 4%;
-        }
-
-        .section-text {
-            margin-bottom: 4%;
-        }
-
-        .contact_grid {
-            flex-direction: column-reverse;
-            text-align: center;
-            padding: 0%;
-        }
-
-        .address {
-            margin-top: 5%;
-        }
-
-        p {
-            font-size: 2.5rem;
-        }
-
-
+    .banner {
+        background-size: contain;
+        height: 50vh;
     }
 
 
-  }
+    .about-section {
+        padding: 0% 3%;
+        margin-bottom: 5%;
+        flex-direction: column;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        height: 400px;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+
+    .box i {
+        font-size: 6rem;
+    }
+
+    .box {
+        margin: 5% auto;
+        padding: 4%;
+    }
+
+    .container img {
+        width: 0 auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .values_section {
+        flex-direction: column;
+
+    }
+
+    .container {
+        padding: 0% 10%;
+    }
+
+    .section-title {
+        margin-bottom: 4%;
+    }
+
+    .section-text {
+        margin-bottom: 4%;
+    }
+
+    .contact_grid {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0%;
+    }
+
+    .address {
+        margin-top: 5%;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+
+
+}
 
 
 /* video */
 
 .ratio-16-9 {
-	padding-bottom: 56.25%;
+    padding-bottom: 56.25%;
 }
 
-video {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.responsive-video {
-	width: 100%;
-	height: 100vh;
-}
 
 .videoHotspotsParent {
     position: relative;
 }
 
-div > .hotspot {
+div>.hotspot {
     box-sizing: border-box;
     position: absolute;
     z-index: 2;
     cursor: pointer;
 }
 
-div > .hotspot.image {
+div>.hotspot.image {
     background-size: cover;
     background-position: center;
 }
@@ -382,7 +373,7 @@ video:focus {
 .hotspotClickBlocker {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     position: absolute;
     z-index: 1;
 }
@@ -393,17 +384,59 @@ video:focus {
 }
 
 .responsive-video {
-	width: 100%;
+    width: 100%;
 }
 
 .ratio-16-9 {
-	padding-bottom: 56.25%;
+    padding-bottom: 56.25%;
 }
 
 .video-js .vjs-big-play-button {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-
 }
+
+#div1 {
+    margin: 0% 5%;
+}
+
+.responsive-video {
+    width: 100%;
+    height: 0;
+}
+
+.ratio-16-9 {
+    padding-bottom: 56.25%;
+}
+
+.video-js .vjs-big-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 3px solid #F85F02;
+    background-color: white;
+}
+
+
+.vjs-icon-placeholder {
+    color: #F85F02;
+    background-color: white;
+}
+
+#hotspotId0, #hotspotId1, #hotspotId2 {
+    animation-name: hotspot;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hotspot {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-30px); }
+    100% { transform: translateY(0); }
+}
+

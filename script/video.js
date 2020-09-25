@@ -1,5 +1,5 @@
 let options = {
-    "controls": true  , 
+    "controls": true, 
     "autoplay": true, 
     "preload": "auto", 
     "loop":false, 
@@ -14,7 +14,7 @@ let option = {
     "autoplay": true, 
     "loop":false,
     "preload": "auto", 
-    "muted": false
+    "muted": true
 };
 
 
