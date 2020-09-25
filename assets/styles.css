@@ -386,6 +386,10 @@ video:focus {
 
 }
 
+.responsive-video {
+    width: 100%;
+    top: -50px;
+}
 
 
 /* .ratio-16-9 {
@@ -445,3 +449,6 @@ video:focus {
 
 
 
+.map {
+    width: 300px;
+}
