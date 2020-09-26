@@ -145,9 +145,11 @@ video.hotspots.init();
 const div1 = document.querySelector('#div1');
 const div2 = document.querySelector('#div2');
 const div3 = document.querySelector('#div3');
+const div4 = document.querySelector('#div4');
 const vid1 = document.querySelector('#video1');
 const vid2 = document.querySelector('#video2');
 const vid3 = document.querySelector('#video3');
+const vid4 = document.querySelector('#video4');
 
 videojs(video1).pause();
 
@@ -256,7 +258,7 @@ const hotspots = [{
 videojs('video2').on('ended', () => {
     div2.classList.add("hidden");
     div1.classList.remove("hidden");
-    if (video1played && video2played && video3played) {
+    if (video2played && video3played && video4played) {
         videojs('video1').currentTime(43);
         videojs('video1').play();
     } else {
@@ -267,7 +269,7 @@ videojs('video2').on('ended', () => {
 videojs('video3').on('ended', () => {
     div3.classList.add("hidden");
     div1.classList.remove("hidden");
-    if (video1played && video2played && video3played) {
+    if (video2played && video3played && video4played) {
         videojs('video1').currentTime(46);
         videojs('video1').play();
     } else {
@@ -278,7 +280,7 @@ videojs('video3').on('ended', () => {
 videojs('video4').on('ended', () => {
     div4.classList.add("hidden");
     div1.classList.remove("hidden");
-    if (video1played && video2played && video3played) {
+    if (video2played && video3played && video4played) {
         videojs('video1').currentTime(46);
         videojs('video1').play();
     } else {
