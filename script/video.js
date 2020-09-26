@@ -1,7 +1,7 @@
 let options = {
     "controls": true, 
     "autoplay": true, 
-    "preload": "false", 
+    "preload": "true", 
     "loop":false, 
     "muted": false
 };
@@ -13,7 +13,7 @@ let option = {
     "controls": true, 
     "autoplay": true, 
     "loop":false,
-    "preload": "false", 
+    "preload": "true", 
     "muted": false
 };
 

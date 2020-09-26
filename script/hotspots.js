@@ -1,6 +1,7 @@
-let video1played = false;
+
 let video2played = false;
 let video3played = false;
+let video4played = false;
 
 const fps = 30; 
 const debug = false; 
@@ -151,13 +152,13 @@ const vid2 = document.querySelector('#video2');
 const vid3 = document.querySelector('#video3');
 const vid4 = document.querySelector('#video4');
 
-videojs(video1).pause();
+// videojs(video1).pause();
 
 const hotspots = [{
         active: true,
         videoId: "video1",
         markIn: 43,
-        markOut: 45,
+        markOut: 44,
         sizeX: 15,
         sizeY: 15,
         posX: 14,
@@ -181,7 +182,7 @@ const hotspots = [{
         active: true,
         videoId: "video1",
         markIn: 43,
-        markOut: 45,
+        markOut: 44,
         sizeX: 15,
         sizeY: 15,
         posX: 60,
@@ -206,7 +207,7 @@ const hotspots = [{
         active: true,
         videoId: "video1",
         markIn: 43,
-        markOut: 45,
+        markOut: 44,
         sizeX: 15,
         sizeY: 15,
         posX: 78,
@@ -225,68 +226,73 @@ const hotspots = [{
                 videojs('video1').pause();
             }
         }
-    },
+    }
+    
+    // ,
 
     
-    {
-        active: true,
-        videoId: "video1",
-        markIn: 43,
-        markOut: 45,
-        sizeX: 70,
-        sizeY: 40,
-        posX: 20,
-        posY: 7,
-        ui: {
-            type: "box",
-            text: "CHECK OUT ALL 3 STUDENTS",
-            style: "font-size:50px; font-weight: 600;",
-        },
-        hotspot: {
-            type: "function",
-            func: () => {
-                video3played = true;
-                div1.classList.add("hidden");
-                div4.classList.remove("hidden");
-                videojs('video1').pause();
-            }
-        }
-    }
+    // {
+    //     active: true,
+    //     videoId: "video1",
+    //     markIn: 43,
+    //     markOut: 47,
+    //     sizeX: 70,
+    //     sizeY: 40,
+    //     posX: 20,
+    //     posY: 7,
+    //     ui: {
+    //         type: "box",
+    //         text: "CHECK OUT ALL 3 STUDENTS",
+    //         style: "font-size:50px; font-weight: 600;",
+    //     },
+    //     hotspot: {
+    //         type: "function",
+    //         func: () => {
+    //             video3played = true;
+    //             div1.classList.add("hidden");
+    //             div4.classList.remove("hidden");
+    //             videojs('video1').pause();
+    //         }
+    //     }
+    // }
 
 ];
 
 videojs('video2').on('ended', () => {
     div2.classList.add("hidden");
     div1.classList.remove("hidden");
+    video2played = true
     if (video2played && video3played && video4played) {
-        videojs('video1').currentTime(43);
+        videojs('video1').currentTime(45);
         videojs('video1').play();
     } else {
-        videojs('video1').currentTime(46);
+        videojs('video1').currentTime(43);
     }
-})
+});
 
 videojs('video3').on('ended', () => {
     div3.classList.add("hidden");
     div1.classList.remove("hidden");
+    video3played = true
     if (video2played && video3played && video4played) {
-        videojs('video1').currentTime(46);
+        videojs('video1').currentTime(45);
         videojs('video1').play();
     } else {
         videojs('video1').currentTime(43);
     }
-})
+});
 
 videojs('video4').on('ended', () => {
     div4.classList.add("hidden");
     div1.classList.remove("hidden");
+    video4played = true
     if (video2played && video3played && video4played) {
-        videojs('video1').currentTime(46);
+        videojs('video1').currentTime(45);
         videojs('video1').play();
     } else {
         videojs('video1').currentTime(43);
     }
-})
+});
 
 
 
