@@ -415,7 +415,7 @@ video:focus {
     transform: translate(-50%, -50%);
 }
 
-#div1 {
+#div1, #div2, #div3, #div4 {
     margin: 0% 5%;
 }
 
