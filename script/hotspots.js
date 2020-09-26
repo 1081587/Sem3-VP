@@ -262,7 +262,7 @@ videojs('video2').on('ended', () => {
     } else {
         videojs('video1').currentTime(46);
     }
-})
+});
 
 videojs('video3').on('ended', () => {
     div3.classList.add("hidden");
@@ -273,7 +273,7 @@ videojs('video3').on('ended', () => {
     } else {
         videojs('video1').currentTime(43);
     }
-})
+});
 
 videojs('video4').on('ended', () => {
     div4.classList.add("hidden");
@@ -284,7 +284,7 @@ videojs('video4').on('ended', () => {
     } else {
         videojs('video1').currentTime(43);
     }
-})
+});
 
 
 
