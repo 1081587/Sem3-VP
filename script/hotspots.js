@@ -154,8 +154,8 @@ videojs(video1).pause();
 const hotspots = [{
         active: true,
         videoId: "video1",
-        markIn: 25,
-        markOut: 30,
+        markIn: 43,
+        markOut: 45,
         sizeX: 15,
         sizeY: 15,
         posX: 14,
@@ -178,8 +178,8 @@ const hotspots = [{
     {
         active: true,
         videoId: "video1",
-        markIn: 25,
-        markOut: 30,
+        markIn: 43,
+        markOut: 45,
         sizeX: 15,
         sizeY: 15,
         posX: 60,
@@ -203,8 +203,8 @@ const hotspots = [{
     {
         active: true,
         videoId: "video1",
-        markIn: 25,
-        markOut: 30,
+        markIn: 43,
+        markOut: 45,
         sizeX: 15,
         sizeY: 15,
         posX: 78,
@@ -225,44 +225,19 @@ const hotspots = [{
         }
     },
 
-    {
-        active: true,
-        videoId: "video1",
-        markIn: 25,
-        markOut: 28,
-        sizeX: 70,
-        sizeY: 40,
-        posX: 10,
-        posY: 7,
-        ui: {
-            type: "box",
-            text: "AREN'T YOU WONDERING WHO THESE PEOPLE ARE?",
-            style: "font-size:50px; font-weight: 600; ",
-        },
-        hotspot: {
-            type: "function",
-            func: () => {
-                video3played = true;
-                div1.classList.add("hidden");
-                div4.classList.remove("hidden");
-                videojs('video1').pause();
-            }
-        }
-    },
-
     
     {
         active: true,
         videoId: "video1",
-        markIn: 29,
-        markOut: 30,
+        markIn: 43,
+        markOut: 45,
         sizeX: 70,
         sizeY: 40,
         posX: 20,
         posY: 7,
         ui: {
             type: "box",
-            text: "CHECK ALL THREE OF THEM TO FIND OUT",
+            text: "CHECK OUT ALL 3 STUDENTS",
             style: "font-size:50px; font-weight: 600;",
         },
         hotspot: {
@@ -282,10 +257,10 @@ videojs('video2').on('ended', () => {
     div2.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(31);
+        videojs('video1').currentTime(43);
         videojs('video1').play();
     } else {
-        videojs('video1').currentTime(28);
+        videojs('video1').currentTime(46);
     }
 })
 
@@ -293,10 +268,10 @@ videojs('video3').on('ended', () => {
     div3.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(31);
+        videojs('video1').currentTime(46);
         videojs('video1').play();
     } else {
-        videojs('video1').currentTime(28);
+        videojs('video1').currentTime(43);
     }
 })
 
@@ -304,10 +279,10 @@ videojs('video4').on('ended', () => {
     div4.classList.add("hidden");
     div1.classList.remove("hidden");
     if (video1played && video2played && video3played) {
-        videojs('video1').currentTime(31);
+        videojs('video1').currentTime(46);
         videojs('video1').play();
     } else {
-        videojs('video1').currentTime(28);
+        videojs('video1').currentTime(43);
     }
 })
 

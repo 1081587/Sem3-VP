@@ -21,7 +21,7 @@ h1 {
 }
 
 p {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
 }
 
 h2 {
@@ -162,12 +162,19 @@ h3 {
     margin-bottom: 20%;
 }
 
+.contact img {
+    height: 400px;
+    width: auto;
+}
+
 .address {
     text-align: center;
 }
 
 .address p {
-    line-height: 2;
+    line-height: 2
+    ;
+    font-size: 2.2rem;
 }
 
 .contact_grid a {
@@ -189,6 +196,11 @@ h3 {
     width: 60%;
     border: 3px solid #F85F02;
     padding: 3% 10%;
+}
+
+.banner_discount p {
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .icons {
@@ -447,8 +459,8 @@ video:focus {
 }
 
 
-
-
 .map {
     width: 300px;
+    transform: rotate(90deg);
+    margin-left: 5%;
 }
