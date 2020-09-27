@@ -1,25 +1,25 @@
 let options = {
     "controls": true, 
-    "autoplay": true, 
-    "preload": "true", 
-    "loop":false, 
-    "muted": false
+    "autoplay": false, 
+    "preload": "auto", 
+    "muted": false,
+    "loop": false
 };
 
 videojs('video1', options);
+videojs('video2', options);
+videojs('video3', options);
+videojs('video4', options);
 
 
-let option = {
-    "controls": true, 
-    "autoplay": true, 
-    "loop":false,
-    "preload": "true", 
-    "muted": false
-};
+// let option = {
+//     "controls": true, 
+//     "autoplay": true, 
+//     "loop":false,
+//     "preload": "true", 
+//     "muted": false
+// };
 
 
-videojs('video2', option);
-videojs('video3', option);
-videojs('video4', option);
 
 
