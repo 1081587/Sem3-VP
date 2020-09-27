@@ -165,7 +165,7 @@ const hotspots = [{
         posY: 22,
         ui: {
             type: "image",
-            style: "height: 150px; width:150px;",
+            style: "height: 8vw; width:8vw;",
             image: "assets/images/social_icon.png"
         },
         hotspot: {
@@ -189,7 +189,7 @@ const hotspots = [{
         posY: 17,
         ui: {
             type: "image",
-            style: "height: 150px; width:150px;",
+            style: "height: 8vw; width:8vw;",
             image: "assets/images/unique_icon.png"
         },
         hotspot: {
@@ -214,7 +214,7 @@ const hotspots = [{
         posY: 20,
         ui: {
             type: "image",
-            style: "height: 150px; width:150px;",
+            style: "height: 8vw; width:8vw;",
             image: "assets/images/money_icon.png"
         },
         hotspot: {
@@ -226,35 +226,29 @@ const hotspots = [{
                 videojs('video1').pause();
             }
         }
+    },
+    
+    {
+        active: true,
+        videoId: "video1",
+        markIn: 43,
+        markOut: 47,
+        sizeX: 70,
+        sizeY: 40,
+        posX: 20,
+        posY: 70,
+        ui: {
+            type: "box",
+            text: "Click one of the icons above.<br> Watch each students unique story!",
+            style: "font-size:3.5vw; font-weight: 200; height: auto; width: auto; text-align: center; background-color: #F85F02;"
+        },
+        hotspot: {
+            type: "function",
+            func: () => {
+                console.log("Internal screaming!");
+            }
+        }
     }
-    
-    // ,
-
-    
-    // {
-    //     active: true,
-    //     videoId: "video1",
-    //     markIn: 43,
-    //     markOut: 47,
-    //     sizeX: 70,
-    //     sizeY: 40,
-    //     posX: 20,
-    //     posY: 7,
-    //     ui: {
-    //         type: "box",
-    //         text: "CHECK OUT ALL 3 STUDENTS",
-    //         style: "font-size:50px; font-weight: 600;",
-    //     },
-    //     hotspot: {
-    //         type: "function",
-    //         func: () => {
-    //             video3played = true;
-    //             div1.classList.add("hidden");
-    //             div4.classList.remove("hidden");
-    //             videojs('video1').pause();
-    //         }
-    //     }
-    // }
 
 ];
 
