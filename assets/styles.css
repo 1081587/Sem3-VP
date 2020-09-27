@@ -143,6 +143,10 @@ h3 {
     box-shadow: 0px 4px 8px rgba(141, 58, 58, 0.25);
 }
 
+.box h3 {
+    padding-top: 15px;
+}
+
 .description_values p {
     font-size: 20px;
     line-height: 1.6;
@@ -172,8 +176,7 @@ h3 {
 }
 
 .address p {
-    line-height: 2
-    ;
+    line-height: 2;
     font-size: 2.2rem;
 }
 
@@ -418,7 +421,10 @@ video:focus {
 /* #div1 {
     margin: 0% 5%;
 } */
-#div1, #div2, #div3, #div4 {
+#div1,
+#div2,
+#div3,
+#div4 {
     margin: 0% 5%;
     padding-top: 75px;
 }
@@ -433,9 +439,17 @@ video:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
+    border-radius: 1000px;
     border: 3px solid #F85F02;
     background-color: white;
+}
+
+.vjs-big-play-button {
+    visibility: visible;
+}
+
+.vjs-icon-placeholder {
+    visibility: visible !important;
 }
 
 
@@ -444,7 +458,9 @@ video:focus {
     background-color: white;
 }
 
-#hotspotId0, #hotspotId1, #hotspotId2 {
+#hotspotId0,
+#hotspotId1,
+#hotspotId2 {
     animation-name: hotspot;
     animation-timing-function: linear;
     animation-duration: 2s;
@@ -452,9 +468,17 @@ video:focus {
 }
 
 @keyframes hotspot {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .responsive-video {
@@ -469,3 +493,13 @@ video:focus {
     margin-left: 5%;
 }
 
+.main-timeline>.vjs-has-started .vjs-control-bar {
+    display: none;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.1s, opacity 0.1s;
+}
+
+.vjs-poster {
+    opacity: 0.9;
+}
